@@ -80,157 +80,106 @@ body {
     padding: 20px;
 }
 
-/* General Container Styles */
+
+
+
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: 90%; /* Make the container responsive */
     margin: 0 auto;
-    padding: 20px;
+    padding: 2% 0;
 }
 
-/* Laptop (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .container {
-        max-width: 960px;
-        padding: 15px;
-    }
-
-    /* Header Navigation */
-    .header-nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center;
-    }
-
-    /* Hero Section */
-    .hero-section {
-        flex-direction: column; /* Stack content and image */
-        text-align: center;
-        padding: 15px;
-    }
-
-    /* Hero Image */
-    .hero-image img {
-        max-width: 300px; /* Scale down for smaller screens */
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns on tablets/laptops */
-        gap: 20px; /* Add some space between cards */
-    }
-
-    /* Skill Card */
-    .skill-card {
-        padding: 20px;
-    }
+/* Flexbox for consistent layout */
+.hero-section, .about-section, .skills-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 0; /* Make padding relative to viewport height */
 }
 
-/* Tablet (max-width: 768px) */
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    /* Header Navigation */
-    .header-nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Hero Section */
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    /* Hero Content */
-    .hero-content h2 {
-        font-size: 2.2rem; /* Adjust size for tablet */
-    }
-
-    /* Hero Image */
-    .hero-image img {
-        max-width: 250px; /* Further reduce image size for tablet */
-    }
-
-    /* About Section */
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-        grid-template-columns: 1fr; /* Single column on tablet */
-        gap: 20px;
-    }
-
-    /* Skill Card */
-    .skill-card {
-        margin-bottom: 20px;
-        padding: 20px;
-    }
+/* Hero Section */
+.hero-section {
+    height: 90vh; /* Full-screen hero section */
 }
 
-/* Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
-    .container {
-        max-width: 100%;
-        padding: 5px;
-    }
+.hero-content {
+    width: 80%; /* Adjust width according to screen size */
+}
 
-    /* Header Navigation */
-    .header-nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center;
-        display: none; /* Consider hiding the navigation on small screens */
-    }
+.hero-content h2 {
+    font-size: 4vw; /* Scale with viewport width */
+}
 
-    /* Hero Section */
-    .hero-section {
-        flex-direction: column; /* Stack content and image */
-        text-align: center;
-        padding: 15px;
-    }
+.hero-content p {
+    font-size: 2.5vw;
+}
 
-    /* Hero Content */
-    .hero-content h2 {
-        font-size: 1.8rem; /* Adjust size for mobile */
-    }
+.hero-image img {
+    width: 30vw; /* Image size adjusts with screen */
+    max-width: 300px; /* Limit the maximum size for larger screens */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
 
-    /* Hero Image */
-    .hero-image img {
-        max-width: 200px; /* Reduce image size further for mobile */
-    }
+/* Button */
+.btn {
+    padding: 1rem 2rem; /* Responsive padding */
+    font-size: 1rem; /* Base font-size */
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    /* Button */
-    .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem; /* Adjust button size for mobile */
-    }
+/* About Section */
+.about-section {
+    width: 100%; /* Full width for consistency */
+    padding: 5vh 0;
+}
 
-    /* Skills Grid */
-    .skills-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 10px; /* Reduce space between skill cards */
-    }
+.about-content {
+    width: 80%;
+    font-size: 1.5rem;
+}
 
-    /* Skill Card */
-    .skill-card {
-        padding: 10px;
-        font-size: 0.9rem; /* Adjust text size for mobile */
-        margin-bottom: 10px;
-    }
+/* Skills Section */
+.skills-section {
+    width: 100%;
+}
 
-    /* About Section */
-    .about-section {
-        text-align: center; /* Center-align the content */
-        padding: 10px;
-    }
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust grid */
+    gap: 20px;
+    width: 100%;
+    padding: 5vh 0;
+}
+
+.skill-card {
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2vh 0;
+    background-color: #0f3460;
+    color: white;
 }
 
 /* Background Animation */
@@ -252,63 +201,70 @@ body {
     }
 }
 
-/* Flexbox and Grid Layout Adjustments */
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+/* Responsive Typography */
+h2 {
+    font-size: 4vw; /* Scale with viewport width */
 }
 
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-    padding: 20px;
+p, .btn {
+    font-size: 1.5vw; /* Maintain consistency */
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Grid for consistent layout on all devices */
+@media (min-width: 480px) {
+    .container {
+        max-width: 85%;
+    }
 
-.hero-image img {
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
-    gap: 20px;
-}
-
-.skill-card {
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Media Queries for Responsiveness */
-
-/* Laptop & Desktop */
-@media only screen and (max-width: 1024px) {
-    .skills-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns on larger tablets/laptops */
+    .hero-section, .about-section, .skills-section {
+        padding: 5vh 0;
     }
 }
 
-/* Tablet */
-@media only screen and (max-width: 768px) {
+@media (min-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .hero-section {
+        flex-direction: row; /* Align text and image side-by-side */
+    }
+
+    .hero-content {
+        width: 50%; /* Make content half the width */
+        padding: 0 2%;
+    }
+
+    .hero-image {
+        width: 50%;
+    }
+
     .skills-grid {
-        grid-template-columns: 1fr; /* 1 column on smaller tablets */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid layout */
     }
 }
 
+@media (min-width: 1024px) {
+    .container {
+        max-width: 75%;
+    }
 
+    .hero-content h2 {
+        font-size: 3vw; /* Reduce font size slightly on larger screens */
+    }
 
+    .hero-content p {
+        font-size: 1.8vw;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
 
 
 
