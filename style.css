@@ -1,64 +1,64 @@
 /* General Transition for all sections */
 .section {
-    opacity: 0; /* Start as invisible */
-    transform: translateY(20px); /* Slide down effect */
+    opacity: 0;
+    transform: translateY(20px);
     animation: fadeInUp 0.6s forwards; /* Animation applied on load */
 }
 
 @keyframes fadeInUp {
     to {
-        opacity: 1; /* Fade in */
-        transform: translateY(0); /* Slide to original position */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 /* Button Hover Effect */
 .btn {
-    background-color: #00adb5; /* Button color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s, transform 0.3s; /* Transition for hover */
+    background-color: #00adb5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #eaeaea; /* Change button color */
-    color: #0f3460; /* Change text color */
-    transform: translateY(-3px); /* Lift effect */
+    background-color: #eaeaea;
+    color: #0f3460;
+    transform: translateY(-3px);
 }
 
 /* Header Animation */
 header {
-    animation: slideDown 0.5s ease-in; /* Slide down effect */
+    animation: slideDown 0.5s ease-in;
 }
 
 @keyframes slideDown {
     from {
-        transform: translateY(-100px); /* Start above */
-        opacity: 0; /* Start invisible */
+        transform: translateY(-100px);
+        opacity: 0;
     }
     to {
-        transform: translateY(0); /* Slide to original position */
-        opacity: 1; /* Fade in */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-/* Add this class to sections for on-load animation */
+/* Section visibility adjustments */
 .section {
     transition: opacity 0.5s ease-in-out;
 }
 
 .section.visible {
-    opacity: 1; /* Make visible */
+    opacity: 1;
 }
 
 /* Background Animation (optional) */
 body {
-    background: linear-gradient(45deg, #0f3460, #00adb5); /* Gradient background */
-    background-size: 400% 400%; /* Size for animation */
-    animation: gradient 15s ease infinite; /* Animation for background */
+    background: linear-gradient(45deg, #0f3460, #00adb5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -73,621 +73,173 @@ body {
     }
 }
 
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background-color: #141414; /* Dark background */
-    color: #eaeaea; /* Light text color */
-    padding: 20px 0; /* Padding */
-    position: fixed; /* Sticky header */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Stay on top */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-}
-
-.container {
-    display: flex; /* Flexbox for alignment */
-    justify-content: center; /* Center nav items */
-    align-items: center; /* Center items vertically */
-    padding: 0 20px; /* Side padding */
-}
-
-.header-nav {
-    flex-grow: 1; /* Allow nav to take available space */
-}
-
-.header-nav ul {
-    list-style: none; /* Remove bullets */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Flexbox for horizontal layout */
-}
-
-.header-nav li {
-    margin: 0 20px; /* Space between nav items */
-}
-
-.header-nav a {
-    color: #eaeaea; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.2rem; /* Font size for links */
-    position: relative; /* Position for pseudo-element */
-    transition: color 0.3s; /* Transition for hover effect */
-}
-
-.header-nav a::after {
-    content: ""; /* Pseudo-element for underline effect */
-    display: block; /* Block level */
-    height: 2px; /* Height of the line */
-    background: #b52a00; /* Color of the line */
-    width: 0; /* Initial width */
-    transition: width 0.3s; /* Transition for width */
-    position: absolute; /* Position relative to link */
-    left: 50%; /* Center the line */
-    bottom: -5px; /* Position below the text */
-}
-
-.header-nav a:hover {
-    color: #860f0f; /* Change text color on hover */
-}
-
-.header-nav a:hover::after {
-    width: 100%; /* Expand width on hover */
-}
-
-
-
+/* Hero Section */
 .hero-section {
-    display: flex; /* Flexbox for side-by-side layout */
-    justify-content: space-between; /* Space between content and image */
-    align-items: center; /* Center items vertically */
-    height: 100vh; /* Full viewport height */
-    background-color: #023e8a; /* Dark background color */
-    color: #eaeaea; /* Light text color */
-    padding: 0 20px; /* Side padding */
-}
-
-.hero-content {
-    flex: 1; /* Take up available space */
-    max-width: 600px; /* Limit width for better readability */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #023e8a;
+    color: #eaeaea;
+    padding: 0 20px;
 }
 
 .hero-content h2 {
-    font-size: 3rem; /* Large title */
-    margin-bottom: 20px; /* Space below title */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Soft glow effect */
-}
-
-.hero-content p {
-    font-size: 1.2rem; /* Size for the description */
-    margin-bottom: 30px; /* Space below paragraph */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-buttons {
-    display: flex; /* Flexbox for buttons */
-    gap: 15px; /* Space between buttons */
-}
-
-.hero-image {
-    flex: 1; /* Take up available space */
-    display: flex; /* Center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.hero-image img {
-    width: 100%; /* Make image responsive */
-    max-width: 500px; /* Limit image width */
-    border-radius: 50%; /* Circular layout */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    transition: transform 0.3s; /* Transition for hover effect */
-}
-
-.hero-image img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.btn {
-    background-color: #d70000; /* Button color */
-    color: #fff; /* Text color for buttons */
-    padding: 10px 20px; /* Padding for buttons */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s; /* Transition for hover effect */
-}
-
-.btn:hover {
-    background-color: #eaeaea; /* Change button color on hover */
-    color: #0f3460; /* Change text color on hover */
-}
-
-
-
-.section {
-    height: 100vh; /* Full Screen */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px; /* Padding for content */
+    gap: 15px;
 }
 
+/* About Section */
 .about-section {
-    height: 60vh; /* Adjusted height */
-    background: #52b69a; /* Gradient background */
-    padding: 80px 20px; /* Padding */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
-    transition: background 0.3s ease; /* Smooth transition on hover */
-    display: flex; /* Use Flexbox for the layout */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Align items vertically in the center */
-    position: relative; /* For positioning shapes */
+    height: 60vh;
+    background: #52b69a;
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
 }
 
 .about-section:hover {
-    background: #0077b6; /* Change background color on hover */
-}
-
-.about-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between; /* Spread out the shapes and content */
-    align-items: center;
-}
-
-.about-shapes {
-    flex: 1;
-    position: relative;
-    height: 100%; /* Ensure shapes container takes full height */
-}
-
-.shape {
-    position: absolute;
-    background: #4caf50; /* Primary color for shapes */
-    opacity: 0.8;
-}
-
-.circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    top: 20%;
-    left: 10%;
-    background-color: #FF5733; /* Orange */
-}
-
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 70px solid transparent;
-    border-right: 70px solid transparent;
-    border-bottom: 120px solid #f1c40f; /* Yellow */
-    top: 50%;
-    left: 20%;
-    transform: translateY(-50%);
-}
-
-.square {
-    width: 100px;
-    height: 100px;
-    top: 70%;
-    left: 5%;
-    background-color: #3498db; /* Blue */
-}
-
-.about-content-wrapper {
-    flex: 2;
-    padding-left: 40px;
-    text-align: left; /* Left align the text */
+    background: #0077b6;
 }
 
 .about-title {
-    font-size: 3.5rem; /* Larger title */
-    color: #FFD700; /* Gold color for title */
-    margin-bottom: 30px; /* Space below title */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Soft shadow for title */
+    font-size: 3.5rem;
+    color: #FFD700;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .about-content {
-    font-style: oblique;
-    font-size: 1.2rem; /* Font size for content */
-    color: #FFFFFF; /* White for readability */
-    line-height: 1.8; /* Line spacing */
-    max-width: 700px; /* Maximum width for better readability */
-    margin: 0 auto; /* Center content */
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.about-content:first-of-type {
-    margin-bottom: 20px; /* Space between paragraphs */
-}
-
-
+/* Skills Section */
 .skills-section {
-
-    background-color: #34a0a4; /* Light blue background color */
-    padding: 60px 20px; /* Space around the section */
-    border-radius: 15px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #34a0a4;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .skills-title {
     text-align: center;
-    font-size: 3rem; /* Larger title */
-    color: #2C3E50; /* Dark Gray Color */
-    margin: 40px 0; /* Space above and below the title */
+    font-size: 3rem;
+    color: #2C3E50;
+    margin: 40px 0;
 }
 
-.skills-container {
-    display: flex;
-    justify-content: space-around; /* Space between left and right sections */
-    align-items: flex-start;
-}
-
-.skills-category {
-    width: 45%; /* Adjust width to fit the layout */
-    position: relative; /* For positioning shapes */
-}
-
-.category-title {
-    font-size: 2rem; /* Subheading size */
-    color: #2C3E50; /* Dark Blue Color */
-    margin-bottom: 20px; /* Space below subheading */
-    text-align: center;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Space between grid items */
-}
-
-.skill-card {
-    background: linear-gradient(135deg, #FF6B6B, #FFD93D); /* Gradient background */
-    color: rgb(20, 10, 46);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); /* Shape effect */
-}
-
-.skill-card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Adding shapes around the categories */
-.technical-skills::before,
-.interpersonal-skills::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    width: 150%;
-    height: 20px;
-    background: #381662; /* Dark Blue Color */
-    border-radius: 10px 10px 0 0;
-    transform: translateX(-50%);
-    z-index: -1; /* Behind the content */
-}
-
-.technical-skills::after,
-.interpersonal-skills::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    width: 150%;
-    height: 20px;
-    background: #0f03ac; /* Dark Blue Color */
-    border-radius: 0 0 10px 10px;
-    transform: translateX(-50%);
-    z-index: -1; /* Behind the content */
-}
-
+/* My Work Section */
 .my-work-section {
-    background-color: #38a3a5; /* Dark background color */
-    padding: 40px; /* Space around the section */
-    text-align: center; /* Center the title */
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
+    background-color: #38a3a5;
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .work-title {
-    font-size: 3rem; /* Larger title for impact */
-    color: #FFD700; /* Gold color for a striking effect */
-    margin-bottom: 40px; /* Space below the title */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Soft glow effect */
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
-.work-grid {
-    display: flex; /* Use flexbox for circular cards */
-    justify-content: center; /* Center the cards */
-    align-items: center; /* Align items centrally */
-    flex-wrap: wrap; /* Allow wrapping */
-    height: 70%; /* Use space efficiently */
-    gap: 30px; /* Space between cards */
-}
-
-.work-card {
-    background-color: #282433; /* Card background color */
-    border-radius: 50%; /* Circular shape */
-    padding: 30px; /* Space inside the card */
-    width: 250px; /* Fixed width for circular cards */
-    height: 250px; /* Fixed height for circular cards */
-    display: flex; /* Flexbox for inner content */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
-}
-
-.work-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
-}
-
-.work-card h3 {
-    font-size: 1.5rem; /* Card title size */
-    color: #FFD700; /* Gold color for the title */
-    margin-bottom: 10px; /* Space below the title */
-}
-
-.work-card p {
-    font-size: 0.9rem; /* Card content size */
-    color: #FFFFFF; /* White color for readability */
-    text-align: center; /* Center text */
-}
-
-
-
+/* Achievements Section */
 .achievements-section {
-    background-color: #ade8f4; /* Dark blue card background color */
-    background-color: ; /* Dark navy background color */
-    padding: 40px; /* Space around the section */
-    text-align: center; /* Center the title */
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
+    background-color: #ade8f4;
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .achievements-title {
-    font-size: 3rem; /* Larger title for impact */
-    color: #eb1f1f; /* Teal color for a striking effect */
-    margin-bottom: 40px; /* Space below the title */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Soft glow effect */
+    font-size: 3rem;
+    color: #eb1f1f;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.achievements-grid {
-    display: flex; /* Use flexbox for circular cards */
-    justify-content: center; /* Center the cards */
-    align-items: center; /* Align items centrally */
-    flex-wrap: wrap; /* Allow wrapping */
-    height: 70%; /* Use space efficiently */
-    gap: 30px; /* Space between cards */
-}
-
-.achievement-card {
-    background-color: #000000; /* Dark blue card background color */
-    border-radius: 50%; /* Circular shape */
-    padding: 20px; /* Space inside the card */
-    width: 200px; /* Fixed width for circular cards */
-    height: 200px; /* Fixed height for circular cards */
-    display: flex; /* Flexbox for inner content */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
-}
-
-.achievement-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
-}
-
-.achievement-card h3 {
-    font-size: 1.2rem; /* Card title size */
-    color: #d2e715; /* Light gray color for the title */
-    margin: 0; /* Remove margin for better centering */
-    text-align: center; /* Center text */
-}
-
+/* Contact Section */
 .contact-section {
-    background-color: #1a1a2e; /* Dark navy background color */
-    padding: 40px; /* Space around the section */
-    text-align: center; /* Center the title */
-    height: 50vh; /* Full viewport height */
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
+    background-color: #1a1a2e;
+    padding: 40px;
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-title {
-    font-size: 3rem; /* Larger title for impact */
-    color: #00adb5; /* Teal color for a striking effect */
-    margin-bottom: 20px; /* Space below the title */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Soft glow effect */
+    font-size: 3rem;
+    color: #00adb5;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.contact-details {
-    margin: auto; /* Center the details */
-    color: #eaeaea; /* Light gray for readability */
-    display: flex; /* Flexbox for contact items */
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Space between items */
-}
-
-.contact-item {
-    display: flex; /* Flexbox for icon and text alignment */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-}
-
-.contact-item i {
-    font-size: 1.5rem; /* Icon size */
-    color: #00adb5; /* Teal color for icons */
-    margin-right: 10px; /* Space between icon and text */
-}
-
-.contact-details a {
-    color: #00adb5; /* Teal for links */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Transition for hover effect */
-}
-
-.contact-details a:hover {
-    color: #eaeaea; /* Change color on hover */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Glow effect on hover */
-}
-
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2C3E50; /* Dark Blue Footer */
+    background-color: #2C3E50;
     color: white;
 }
 
-/* Default styles are for large screens (laptops and desktops) */
-
-/* Tablets (landscape mode) */
+/* Media Queries for different screen sizes */
 @media (max-width: 1024px) {
-    .container, .hero-section, .about-section, .skills-section, .my-work-section, .achievements-section, .contact-section {
-        padding: 20px;
-    }
-    
     .header-nav ul {
-        flex-direction: column; /* Stack navigation links */
+        flex-direction: column;
         align-items: center;
-    }
-    
-    .hero-section {
-        flex-direction: column; /* Stack content vertically */
-        height: auto; /* Adjust height for better fit */
-    }
-
-    .hero-content {
-        max-width: 100%; /* Allow content to fill more space */
-        text-align: center; /* Center content */
-    }
-
-    .hero-image img {
-        max-width: 300px; /* Limit image size for tablets */
-    }
-
-    .skills-container {
-        flex-direction: column; /* Stack the skills columns */
-        align-items: center;
-    }
-
-    .skills-category {
-        width: 90%; /* Make skill categories narrower for better fit */
-    }
-
-    .work-grid, .achievements-grid {
-        flex-direction: column; /* Stack work/achievement cards vertically */
-        align-items: center;
-    }
-    
-    .work-card, .achievement-card {
-        width: 180px;
-        height: 180px;
-    }
-}
-
-/* Phones (portrait mode) */
-@media (max-width: 768px) {
-    header {
-        padding: 10px 0; /* Reduce padding */
-    }
-
-    .header-nav ul {
-        flex-direction: column; /* Stack nav items */
     }
 
     .hero-section {
         flex-direction: column;
-        text-align: center;
-        height: auto; /* Auto height for better content flow */
+        height: auto;
     }
 
-    .hero-content h2 {
-        font-size: 2.5rem; /* Smaller title font size */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
     }
 
-    .hero-content p {
-        font-size: 1rem; /* Adjust paragraph size */
-    }
-
-    .hero-image img {
-        max-width: 250px; /* Reduce image size for phones */
-    }
-
-    .about-section {
-        height: auto; /* Adjust height to fit content */
-    }
-
-    .about-title {
-        font-size: 2.5rem; /* Reduce title size */
-    }
-
-    .about-content {
-        font-size: 1rem; /* Adjust font size for readability */
-        max-width: 100%; /* Make the section full width */
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* Show two items per row */
-        gap: 10px;
-    }
-
-    .work-grid, .achievements-grid {
-        flex-direction: column; /* Stack items vertically */
+    .header-nav ul {
+        flex-direction: column;
         align-items: center;
     }
 
-    .work-card, .achievement-card {
-        width: 150px;
-        height: 150px; /* Adjust size for smaller screens */
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-category {
+        width: 90%;
     }
 }
-
-/* Small Phones (portrait mode) */
-@media (max-width: 480px) {
-    .hero-content h2 {
-        font-size: 2rem; /* Even smaller title font size */
-    }
-
-    .hero-content p {
-        font-size: 0.9rem; /* Smaller paragraph size */
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr; /* Stack items vertically */
-    }
-
-    .work-card, .achievement-card {
-        width: 130px; /* Smaller work and achievement cards */
-        height: 130px;
-    }
-    
-    .contact-details {
-        font-size: 0.9rem; /* Smaller text size for contact details */
-    }
-}
-
