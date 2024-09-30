@@ -80,73 +80,118 @@ body {
     padding: 20px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1024px) {
     .container {
-        padding: 10px; /* Reduce padding on smaller screens */
+        max-width: 960px;
+        padding: 15px;
     }
 
-    .hero-content h2 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    .header-nav ul {
+        flex-direction: column;
     }
 
-    .hero-content p {
-        font-size: 1rem; /* Adjust font size for readability */
-    }
-
-    .header-nav li {
-        margin: 0 15px; /* Reduce space between nav items */
-    }
-}
-
-@media only screen and (max-width: 768px) {
     .hero-section {
-        flex-direction: column; /* Stack content vertically */
-        text-align: center; /* Center align text */
+        flex-direction: column;
+        text-align: center;
     }
 
     .hero-image img {
-        max-width: 300px; /* Reduce image size for tablets */
-    }
-
-    .header-nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-    }
-
-    .header-nav li {
-        margin: 10px 0; /* Space between vertical nav items */
-    }
-
-    .btn {
-        padding: 8px 16px; /* Reduce button padding */
+        max-width: 300px;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .hero-content h2 {
-        font-size: 2rem; /* Adjust font size for mobile */
-    }
-
-    .hero-image img {
-        max-width: 200px; /* Further reduce image size for mobile */
-    }
-
-    .btn {
-        font-size: 0.9rem; /* Adjust button font size */
-        padding: 6px 12px; /* Reduce button padding */
-    }
-
-    .header-nav ul {
-        display: none; /* Hide header navigation on mobile */
-    }
-
-    header {
-        padding: 10px 0; /* Reduce header padding on mobile */
-    }
-
+/* For mobile devices (up to 768px) */
+@media (max-width: 768px) {
     .container {
-        padding: 5px; /* Minimize container padding */
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        margin-bottom: 20px;
     }
 }
+
+/* For very small devices (up to 480px) */
+@media (max-width: 480px) {
+    .header-nav a {
+        font-size: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-image img {
+        max-width: 200px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Background Animation */
+body {
+    background: linear-gradient(45deg, #0f3460, #00adb5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
 header {
     background-color: #141414; /* Dark background */
     color: #eaeaea; /* Light text color */
