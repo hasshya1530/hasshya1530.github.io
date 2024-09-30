@@ -506,3 +506,129 @@ footer {
     background-color: #2C3E50; /* Dark Blue Footer */
     color: white;
 }
+
+/* Container */
+.container {
+    max-width: 100%; /* Full width for smaller screens */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flexbox adjustments for hero section */
+.hero-section {
+    flex-direction: column; /* Stack on smaller screens */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+}
+
+.hero-image {
+    max-width: 100%; /* Ensure image scales properly */
+    margin-bottom: 20px; /* Add spacing on smaller screens */
+}
+
+.hero-content h2 {
+    font-size: 2.5rem; /* Adjust title size for smaller screens */
+}
+
+.hero-content p {
+    font-size: 1rem; /* Adjust paragraph size for smaller screens */
+}
+
+.hero-buttons {
+    flex-direction: column; /* Stack buttons on smaller screens */
+    gap: 10px;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 40px 10px; /* Adjust padding for smaller screens */
+}
+
+.skills-container {
+    flex-direction: column; /* Stack skills on smaller screens */
+    align-items: center;
+}
+
+.skills-category {
+    width: 90%; /* Full width on smaller screens */
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+}
+
+@media (max-width: 768px) {
+    /* Further adjust for tablet and mobile screens */
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .hero-section {
+        height: auto; /* Allow content to define the height */
+    }
+
+    .hero-content h2 {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 16px; /* Smaller buttons */
+    }
+
+    /* Header */
+    header {
+        padding: 10px 0; /* Less padding */
+    }
+
+    .header-nav {
+        justify-content: space-around; /* Adjust spacing in header */
+    }
+
+    .header-nav a {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    /* Work Section */
+    .work-grid {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .work-card {
+        width: 80%; /* Increase card width */
+        margin-bottom: 20px; /* Add space between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile-specific styles */
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 6px 12px; /* Smaller padding for buttons */
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .about-title {
+        font-size: 2rem; /* Smaller title */
+    }
+
+    .about-content {
+        font-size: 1rem; /* Smaller content */
+    }
+}
+
