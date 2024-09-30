@@ -219,39 +219,95 @@ header {
 }
 
 .about-section {
-    height: 60vh; /* Full Screen */
-    background:#52b69a; /* Dark gradient background */
-    padding: 80px 20px; /* Space around the section */
-    border-radius: 20px; /* Rounded corners for a softer look */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
-    text-align: center; /* Centered text for a cohesive look */
+    height: 60vh; /* Adjusted height */
+    background: #52b69a; /* Gradient background */
+    padding: 80px 20px; /* Padding */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
     transition: background 0.3s ease; /* Smooth transition on hover */
+    display: flex; /* Use Flexbox for the layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align items vertically in the center */
+    position: relative; /* For positioning shapes */
 }
 
 .about-section:hover {
-    background:#0077b6; /* Slightly adjusted gradient on hover */
+    background: #0077b6; /* Change background color on hover */
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between; /* Spread out the shapes and content */
+    align-items: center;
+}
+
+.about-shapes {
+    flex: 1;
+    position: relative;
+    height: 100%; /* Ensure shapes container takes full height */
+}
+
+.shape {
+    position: absolute;
+    background: #4caf50; /* Primary color for shapes */
+    opacity: 0.8;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    background-color: #FF5733; /* Orange */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 120px solid #f1c40f; /* Yellow */
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    top: 70%;
+    left: 5%;
+    background-color: #3498db; /* Blue */
+}
+
+.about-content-wrapper {
+    flex: 2;
+    padding-left: 40px;
+    text-align: left; /* Left align the text */
 }
 
 .about-title {
-    font-size: 3.5rem; /* Larger title for impact */
-    color: #FFD700; /* Gold color for a striking effect */
-    margin-bottom: 30px; /* Space below the title */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Soft glow effect */
+    font-size: 3.5rem; /* Larger title */
+    color: #FFD700; /* Gold color for title */
+    margin-bottom: 30px; /* Space below title */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Soft shadow for title */
 }
 
 .about-content {
     font-style: oblique;
     font-size: 1.2rem; /* Font size for content */
-    color: #FFFFFF; /* White color for readability */
-    line-height: 1.8; /* Increased spacing between lines */
-    max-width: 700px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the content */
+    color: #FFFFFF; /* White for readability */
+    line-height: 1.8; /* Line spacing */
+    max-width: 700px; /* Maximum width for better readability */
+    margin: 0 auto; /* Center content */
 }
 
 .about-content:first-of-type {
     margin-bottom: 20px; /* Space between paragraphs */
 }
-
 
 
 .skills-section {
