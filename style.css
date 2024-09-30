@@ -219,7 +219,7 @@ header {
 }
 
 .about-section {
-    height: 85vh; /* Full Screen */
+    height: 70vh; /* Full Screen */
     background:#52b69a; /* Dark gradient background */
     padding: 80px 20px; /* Space around the section */
     border-radius: 20px; /* Rounded corners for a softer look */
