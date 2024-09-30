@@ -80,6 +80,73 @@ body {
     padding: 20px;
 }
 
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Adjust font size for readability */
+    }
+
+    .header-nav li {
+        margin: 0 15px; /* Reduce space between nav items */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .hero-image img {
+        max-width: 300px; /* Reduce image size for tablets */
+    }
+
+    .header-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .header-nav li {
+        margin: 10px 0; /* Space between vertical nav items */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Reduce button padding */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .hero-image img {
+        max-width: 200px; /* Further reduce image size for mobile */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 6px 12px; /* Reduce button padding */
+    }
+
+    .header-nav ul {
+        display: none; /* Hide header navigation on mobile */
+    }
+
+    header {
+        padding: 10px 0; /* Reduce header padding on mobile */
+    }
+
+    .container {
+        padding: 5px; /* Minimize container padding */
+    }
+}
 header {
     background-color: #141414; /* Dark background */
     color: #eaeaea; /* Light text color */
