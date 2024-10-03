@@ -141,7 +141,7 @@ header {
 }
 
 
-
+/* General layout for the homepage */
 .hero-section {
     display: flex; /* Flexbox for side-by-side layout */
     justify-content: space-between; /* Space between content and image */
@@ -154,7 +154,8 @@ header {
 
 .hero-content {
     flex: 1; /* Take up available space */
-    max-width: 600px; /* Limit width for better readability */
+    max-width: 50%; /* Limit width to 50% of the screen */
+    padding-right: 40px; /* Add some spacing between content and image */
 }
 
 .hero-content h2 {
@@ -181,7 +182,7 @@ header {
 }
 
 .hero-image img {
-    width: 100%; /* Make image responsive */
+    width: 80%; /* Make image responsive */
     max-width: 500px; /* Limit image width */
     border-radius: 50%; /* Circular layout */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
@@ -191,6 +192,7 @@ header {
 .hero-image img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
+
 
 .btn {
     background-color: #d70000; /* Button color */
